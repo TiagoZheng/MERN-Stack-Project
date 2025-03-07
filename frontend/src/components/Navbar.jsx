@@ -1,10 +1,12 @@
 import React from "react";
-import { Button, Container, Flex, HStack, Text, useColorMode} from "@chakra-ui/react";
+import { Button, Container, Flex, HStack, Text} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 import { FaRegPlusSquare } from "react-icons/fa";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { useColorMode } from "./ui/color-mode";
+
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -25,12 +27,11 @@ const Navbar = () => {
           fontWeight={"bold"}
           textTransform={"uppercase"}
           textAlign={"center"}
-          //bgGradient={"to-r, cyan.400, blue.500"}
-          //bgClip={"text"}
+
         >
           <Link to={"/"}> Product Store 🛒 </Link>
         </Text>
-
+      
         <HStack spacing={2} alignItems={"center"}>
           <Link to={"/create"}>
             <Button>
