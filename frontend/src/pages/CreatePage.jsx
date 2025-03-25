@@ -2,7 +2,6 @@ import { useColorModeValue } from "@/components/ui/color-mode";
 import { useProductStore } from "@/store/product";
 import { Box, Button, Container, Heading, Input, VStack } from "@chakra-ui/react";
 import { useState } from "react";
-import { LuChevronsLeftRightEllipsis } from "react-icons/lu";
 
 const CreatePage = () => {
   const [newProduct, setNewProduct] = useState({
@@ -15,7 +14,7 @@ const CreatePage = () => {
 
   const handdleAddProduct = async () => {
     const { success, message } = await createProduct(newProduct);
-    console.log("Success:", success);
+    console.log("Success: ", success);
     console.log("Message: ", message);
   };
 
